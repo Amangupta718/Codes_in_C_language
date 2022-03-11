@@ -1,0 +1,39 @@
+// binary search
+#include<stdio.h>
+void main()
+{
+    int n,low=0,mid=0,s,f=0;
+    printf("enter the size of array:");
+    scanf("%d",&n);
+    int ar[n];
+    int high=n-1;
+    printf("enter the array elements");
+    for(int i=0;i<n;i++){
+        scanf("%d",&ar[i]);
+    }
+    printf("enter the element to be searched:");
+    scanf("%d",&s);
+    while(n>=0){
+        mid=(low+high)/2;
+        if(ar[mid]>s){
+        high=mid;
+    }
+    else if(ar[mid]<s){
+        low=mid;
+    }
+    else if(ar[mid]==s){
+    mid=mid+1;
+    printf("position of element is:");
+    printf("%d",mid);
+    f=1;
+    break;
+    }
+  n--;
+}
+  if(f==0){
+  printf("invalid input");
+}
+}
+
+
+   
